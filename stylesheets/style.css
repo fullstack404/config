@@ -3,7 +3,7 @@ body{
 }
 
 #horizontal-menu{
-    position:fixed;
+    position:sticky;
     height:50px;
     width:100%;
     background-color:#1E90FF;  
@@ -32,4 +32,9 @@ img{
 i{
     color:white;
     cursor:pointer;
+}
+
+#myVideo {
+    width:100%;
+    filter: brightness(30%);
 }
