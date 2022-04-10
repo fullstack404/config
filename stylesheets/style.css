@@ -38,3 +38,13 @@ i{
     width:100%;
     filter: brightness(30%);
 }
+
+.footer{
+    background-color:#1E90FF;
+    color:white;
+    margin:0;
+    height:300px;
+    width:100%;
+    position:absolute;
+    top:760px;
+}
