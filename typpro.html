@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.5">
+  <meta charset="utf-8">
+  
+  <!---Bootstrap link---->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  
+  <!-- Favicon link -->
+  <link rel="icon" href="media\favicon-32x32.png">
+
+  <!-- Font Awesome icons link -->
+  <script src="https://kit.fontawesome.com/562a44d30d.js" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+
+  <!-- External stylesheet link -->
+  <link rel="stylesheet" href="stylesheets\common.css">
+  
+  <!-- Side panel -->
+  <script>
+    function openNav() {
+      document.getElementById("mySidepanel").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidepanel").style.width = "0";
+    }
+
+    function openNava() {
+      document.getElementById("myaccount").style.width = "250px";
+    }
+    
+    function closeNava() {
+      document.getElementById("myaccount").style.width = "0";
+    }
+  </script>
+
+  <style>
+    .bg-image{
+      background-image: url("E:/Website/media/1_2db8F59LEiO6VfX0fJDpgA.jpeg");
+    }
+  </style>
+</head>
+<!---------------------------------------------------------------------------------------------------------------------------------------->
+<body>
+  <section>
+  <div class="horizontal-menu">
+    <i style="left:15px; top:13px;" class="fa-solid fa-bars openbtn" onclick="openNav()"></i>
+    <img class="logo" src="media\CONFIGURE.png" alt=""> 
+    <input type="text" placeholder=" Search Laptops..." >
+    <i style="left:820px; top:13px; color:#1E90FF;" class="fa-solid fa-magnifying-glass"></i>
+    <i class="fas fa-star" style="right:50px; top:13px;"></i>
+    <i style="right: 15px; top:13px;" class="fa-solid fa-user openbtn" onclick="openNava()"></i>
+  </div>
+  
+  <div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="main.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div id="myaccount" class="account">
+    <a href="javascript:void(0)" class="closebtna" onclick="closeNava()">×</a>
+    <a href="">Login</a>
+    <a href="">Signup</a>
+  </div>
+</section>
+
+  <div class="bg-image"></div>
+  <div class="bg-text">
+    <h1>Programmer's Zone</h1><br>
+    <p>
+      If you're looking for the best laptops for programming, then you've come to the right place. On this page, you'll find a range of great devices that will making coding a joy.
+      These days, many of us are splitting our work lives between the office and home, and that means laptops have become more essential than ever before, allowing you to easily work pretty much anywhere.
+      While you don't always need a powerful laptop for coding on, investing in a laptop with cutting-edge components can still be very beneficial. The more powerful the laptop, the faster it'll be at compiling and testing code, and this can drastically speed up your workflow. 
+      That means less waiting around, and more time taking on other projects.
+    </p>
+    <button type="button" class="explore"><span><a href=""> Click to explore! </a></span></button>
+  </div>
+
+  <div class="copy-rights"> 
+    <p>&copy; 2022 Fahad Ahmed.</p>
+  </div>
+  
+</body>
+</html>

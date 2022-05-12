@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.5">
+  <meta charset="utf-8">
+  
+  <!---Bootstrap link---->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  
+  <!-- Favicon link -->
+  <link rel="icon" href="media\favicon-32x32.png">
+
+  <!-- Font Awesome icons link -->
+  <script src="https://kit.fontawesome.com/562a44d30d.js" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+
+  <!-- External stylesheet link -->
+  <link rel="stylesheet" href="stylesheets\home_page.css">
+  
+  <!-- Side panel -->
+  <script>
+    function openNav() {
+      document.getElementById("mySidepanel").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidepanel").style.width = "0";
+    }
+
+    function openNava() {
+      document.getElementById("myaccount").style.width = "250px";
+    }
+    
+    function closeNava() {
+      document.getElementById("myaccount").style.width = "0";
+    }
+  </script>
+</head>
+<!---------------------------------------------------------------------------------------------------------------------------------------->
+<body>
+  <section>
+  <div class="horizontal-menu">
+    <i style="left:15px; top:13px;" class="fa-solid fa-bars openbtn" onclick="openNav()"></i>
+    <img class="logo" src="media\CONFIGURE.png" alt=""> 
+    <input type="text" placeholder=" Search Laptops..." >
+    <i style="left:820px; top:13px; color:#1E90FF;" class="fa-solid fa-magnifying-glass"></i>
+    <i class="fas fa-star" style="right:50px; top:13px;"></i>
+    <i style="right: 15px; top:13px;" class="fa-solid fa-user openbtn" onclick="openNava()"></i>
+  </div>
+  
+  <div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="main.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+   <div id="myaccount" class="account">
+     <a href="javascript:void(0)" class="closebtna" onclick="closeNava()">×</a>
+     <a href="">Login</a>
+     <a href="#">Signup</a>
+    </div>
+  </section>
+
+<!---------------------------------------------------------------------------------------------------------------------------------------->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------->
+
+<section>
+  <video autoplay muted loop id="myVideo">
+    <source src="media\Final BG Video.mp4" type="video/mp4">
+  </video>
+  <h1 class="one-liner">KNOW THE CONFIGURATION YOU NEED.</h1> 
+  <button type="button" class="explore"><span><a href="main1.html"> Explore </a></span></button>
+</section>
+
+<!---------------------------------------------------------------------------------------------------------------------------------------->
+<section>
+  <div class="footer">
+    <h1>CONFIG</h1><br>
+    <p>CONFIG is a website where you can find a laptop with perfect configuration best suited for your needs.<br>
+      Find yours now!
+    </p>
+  </div>
+  <div class="copy-rights"> 
+    <p>&copy; 2022 Fahad Ahmed.</p>
+  </div>
+</section>
+
+</body>
+</html>

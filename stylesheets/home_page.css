@@ -35,9 +35,10 @@ input[type=text] {
     position:absolute;
     top:6px;
     left:450px; 
+    padding: 12px 21px;
 }
 
-.sidepanel  {
+.sidepanel{
     font-family: Montserrat;
     width: 0;
     position: fixed;
@@ -71,7 +72,8 @@ input[type=text] {
     right: 25px;
     font-size: 36px;
 }
-.account {
+
+.account{
     font-family: Montserrat;
     width: 0;
     position: fixed;
@@ -83,8 +85,7 @@ input[type=text] {
     opacity:0.9;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
-    
+    padding-top: 60px; 
 }
   
 .account a {
@@ -94,24 +95,28 @@ input[type=text] {
     color: #818181;
     display: block;
     transition: 0.3s;
+    margin-left:90px;
 }
   
 .account a:hover {
     color: #f1f1f1;
 }
   
-.account.closebtna {
+.account .closebtna {
     position: absolute;
-    top: 0;
-    right: 25px;
+    top: 0px;
+    left: 5px;
     font-size: 36px;
+    margin-left:0px;
 }
+
 /*--------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*Content styling*/
 #myVideo {
     width:100%;
     filter: brightness(30%);
+    
 }
 
 .one-liner{
@@ -143,9 +148,7 @@ input[type=text] {
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
-
   }
-
 
 .explore span {
     cursor: pointer;
@@ -170,6 +173,11 @@ input[type=text] {
   .explore:hover span:after {
     opacity: 1;
     right: 0;
+  }
+
+  .explore a{
+      text-decoration: none;
+      color:white;
   }
 
 /*--------------------------------------------------------------------------------------------------------------------------------------*/
