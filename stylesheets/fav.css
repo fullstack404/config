@@ -1,14 +1,11 @@
-body, html {
-    height: 100%;
-    background-color:  rgb(0, 15, 18);
-    font-family: Montserrat;
-    margin: 0;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-
+html,body{
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0; 
+    background-color: rgb(0, 15, 18); 
+   
+}
 /*Horizontal-menu styling*/
 .horizontal-menu{
     position:sticky;
@@ -47,7 +44,7 @@ input[type=text] {
     font-family: Montserrat;
     width: 0;
     position: fixed;
-    z-index: 3;
+    z-index: 1;
     height: 600px;
     top: 0;
     left:0;
@@ -82,7 +79,7 @@ input[type=text] {
     font-family: Montserrat;
     width: 0;
     position: fixed;
-    z-index: 3;
+    z-index: 1;
     height: 600px;
     top: 0;
     right: 0;
@@ -115,92 +112,66 @@ input[type=text] {
     margin-left:0px;
 }
 
-.bg-image {  
-    /* Add the blur effect */
-    filter: blur(3px);
-    -webkit-filter: blur(3px);
-    
-    /* Full height */
-    height: 100%; 
-    
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  /* Position text in the middle of the page/image */
-  .bg-text {
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-    color: white;
-    border: 3px solid #f1f1f1;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 80%;
-    padding: 30px 30px 50px 30px;
-    text-align: center;
-  }
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
 
-  .bg-text h1{
-      font-weight: bold;
-  }
-
-  .bg-text p{
-      text-align: justify;
-      line-height:30px;
-      font-weight: normal;
-  }
-
-  .explore {
-    border-radius: 4px;
-    position:relative;
-    top:20px;
-    width:300px;
+.favorites div{
+    height:300px;
+    width:200px;
     background-color:#1E90FF;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 25px;
-    font-family: Montserrat;
-    padding: 20px;
-    transition: all 0.5s;
+    color:white;
+    text-align:center;
+    font-size: 10px;
+    margin:25px;
+    font-family: Montserrat; 
     cursor: pointer;
-    margin: 5px;
-  }
+}
 
-.explore span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .explore span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .explore:hover span {
-    padding-right: 25px;
-  }
-  
-  .explore:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
+.fav1:hover{
+    box-shadow: 0 4px 8px 0 #1E90FF, 0 6px 20px 0 #1E90FF;
+}
+.fav2:hover{
+    box-shadow: 0 4px 8px 0 #1E90FF, 0 6px 20px 0 #1E90FF;
+}
+.fav3:hover{
+    box-shadow: 0 4px 8px 0 #1E90FF, 0 6px 20px 0 #1E90FF;
+}
+.fav4:hover{
+    box-shadow: 0 4px 8px 0 #1E90FF, 0 6px 20px 0 #1E90FF;
+}
+.fav5:hover{
+    box-shadow: 0 4px 8px 0 #1E90FF, 0 6px 20px 0 #1E90FF;
+}
+.fav6:hover{
+    box-shadow: 0 4px 8px 0 #1E90FF, 0 6px 20px 0 #1E90FF;
+}
+.fav7:hover{
+    box-shadow: 0 4px 8px 0 #1E90FF, 0 6px 20px 0 #1E90FF;
+}
+.fav8:hover{
+    box-shadow: 0 4px 8px 0 #1E90FF, 0 6px 20px 0 #1E90FF;
+}
+.fav9:hover{
+    box-shadow: 0 4px 8px 0 #1E90FF, 0 6px 20px 0 #1E90FF;
+}
+.fav10:hover{
+    box-shadow: 0 4px 8px 0 #1E90FF, 0 6px 20px 0 #1E90FF;
+}
 
-  .explore a{
-      text-decoration: none;
-      color:white;
-  }
+
+.favorites h6{
+    font-weight:bold;
+    padding-top: 10px;
+
+}
+
+.favorites p{
+    margin:0;
+}
+
+.favorites img{
+    width:200px;
+    height:200px;
+}
 /*--------------------------------------------------------------------------------------------------------------------------------------*/
 /*Footer styling*/
 
@@ -208,6 +179,8 @@ input[type=text] {
     height:50px;
     width:100%;
     background-color:black;
+    position: relative;
+    top:485px;
     color:white;
 }
 
