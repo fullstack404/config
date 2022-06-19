@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
 
   <!-- External stylesheet link -->
-  <link rel="stylesheet" href="stylesheets\view.css">
+  <link rel="stylesheet" href="stylesheets/view.css">
   
   <!-- Side panel -->
   <script>
@@ -40,6 +40,47 @@
     function closeNava() {
       document.getElementById("myaccount").style.width = "0";
     }
+
+    let slideIndex = 0;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+       showSlides(slideIndex += n);
+       console.log(slideIndex);
+      }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slides");
+      let slides1 = document.getElementsByClassName("demo");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none";
+         slides1[i].style="opacity:0.6";
+         
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      slides1[slideIndex-1].style="opacity:1; box-shadow: 0 4px 8px 0 #1E90FF, 0 6px 20px 0 #1E90FF;";
+      
+}
+    function addToFav(){
+      if(document.getElementById("star").style.color == "white"){
+        document.getElementById("star").style.color = "yellow";
+        document.getElementById("text").innerHTML="Remove from favorites";
+        document.getElementById("text").style.width="200px";
+      } 
+      else if(document.getElementById("star").style.color == "yellow"){
+        document.getElementById("star").style.color = "white";
+        document.getElementById("text").innerHTML="Add to favorites";
+        document.getElementById("text").style.width="160px";
+      }  
+    }
   </script>
 </head>
 <!---------------------------------------------------------------------------------------------------------------------------------------->
@@ -50,7 +91,7 @@
     <img class="logo" src="media\CONFIGURE.png" alt=""> 
     <input type="text" placeholder=" Search Laptops..." >
     <i style="left:820px; top:13px; color:#1E90FF;" class="fa-solid fa-magnifying-glass"></i>
-    <a href="fav.html"><i class="fas fa-star" style="right:50px; top:13px;"></a></i>
+    <a href="fav.html"><i class="fas fa-star" style="right:50px; top:13px;"></i></a>
     <i style="right: 15px; top:13px;" class="fa-solid fa-user openbtn" onclick="openNava()"></i>
   </div>
   
@@ -67,101 +108,120 @@
      <a href="#">Signup</a>
     </div>
   </section>
+
 <!----Single Image Display section------------------------------------------------------------------------------------------------------------------------------------>
   <section>
-    <div>
-      <table>
-        <tr>
-          <td>
-            <div class="left">
-              <h3><</h3>
-            </div>
-          </td>
-          <td>
-            <div>
-              <img src="media\61Y30DpqRVL._SL1500_.jpg">
-            </div>
-          </td>
-          <td>
-            <div class="right">
-              <h3>></h3>
-            </div>
-          </td>
-        </tr>
-      </table>
-    </div>
+      <div class="slides">
+        <img src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg">
+      </div>
+      <div class="slides">
+        <img src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg">
+      </div>
+      <div class="slides">
+        <img src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg">
+      </div>
+      <div class="slides">
+        <img src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg">
+      </div>
+      <div class="slides">
+        <img src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg">
+      </div>
+      <div class="slides">
+        <img src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg">
+      </div>
+      <div class="slides">
+        <img src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg">
+      </div>
+      <div class="slides">
+        <img src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg">
+      </div>
+      <div class="slides">
+        <img src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg">
+      </div>
+      <div class="slides">
+        <img src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
 
 <!--Multile Images Display section-------------------------------------------------------------------------------------------------------->
-    <div class="multi-imgs">
-      <img src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg">
-      <img src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg">
-      <img src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg">
-      <img src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg">
-      <img src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg">
-      <img src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg">
-      <img src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg">
-      <img src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg">
-      <img src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg">
-      <img src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg">
-    </div>
+<div class="multi-imgs">
+  <img class="demo" src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" onclick="currentSlide(1)">
+  <img class="demo" src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" onclick="currentSlide(2)">
+  <img class="demo" src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" onclick="currentSlide(3)">
+  <img class="demo" src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" onclick="currentSlide(4)">
+  <img class="demo" src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" onclick="currentSlide(5)">
+  <img class="demo" src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" onclick="currentSlide(6)">
+  <img class="demo" src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" onclick="currentSlide(7)">
+  <img class="demo" src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" onclick="currentSlide(8)">
+  <img class="demo" src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" onclick="currentSlide(9)">
+  <img class="demo" src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" onclick="currentSlide(10)">
+</div>
 
 <!--Information section------------------------------------------------------------------------------------------------------------------->
     <div class="info">
       <h5 style="text-align:center;">01. <span class="name">Apple MACBOOK PRO</span></h5><br><br>
+      <div class="fav">
+      <i id="star" style="color:white" class="fas fa-star" onclick="addToFav()"></i>
+        <span id="text" class="tooltiptext">Add to favorites</span>
+      </div>  
     <div class="info1">
       <h4>General Info</h4>
       <table>
         <tr>
-          <td style="width:30%">Brand :</td>
+          <ul>
+          <td style="width:40%"><li>Brand :</li></td>
           <td >Apple</td>
         </tr>
         <tr>
-          <td>Model :</td>
+          <td><li>Model :</li></td>
           <td>MAC BOOK PRO</td>
         </tr>
         <tr>
-          <td>Price :</td>
+          <td><li>Price :</li></td>
           <td>$1000</td>
         </tr>
         <tr>
-          <td>Size :</td>
-          <td>16 inch</td>
-        </tr>
-        <tr>
-          <td>Weight :</td>
+          <td><li>Weight :</li></td>
           <td>3 KG</td>
         </tr>
         <tr>
-          <td>Color :</td>
+          <td><li>Size :</li></td>
+          <td>16 inch</td>
+        </tr>
+        <tr>
+          <td><li>Color :</li></td>
           <td>Silver</td>
+        </ul>
         </tr>
       </table>
       </div>
       <div class="info1">
-        <h4>Hardwares Info</h4>
+        <h4>Hardware Info</h4>
         <table>
           <tr>
-            <td>Processor :</td>
+            <td style="width:60%"><li>Processor :</li></td>
             <td>Apple M1 Pro</td>
           </tr>
           <tr>
-            <td>RAM :</td>
+            <td><li>RAM :</li></td>
             <td>Upto 64 GB</td>
           </tr>
           <tr>
-            <td>Storage :</td>
+            <td><li>Storage :</li></td>
             <td>1 TB</td>
           </tr>
           <tr>
-            <td>Battery life :</td>
+            <td><li>Battery life :</li></td>
             <td>Upto 21 hours</td>
           </tr>
           <tr>
-            <td>Graphics :</td>
+            <td><li>Graphics :</li></td>
             <td>16 Core GPU</td>
           </tr>
           <tr>
-            <td>Screen Quality :</td>
+            <td><li>Screen Quality :</li></td>
             <td>Liquid Retina XDR display</td>
           </tr>
         </table>
@@ -170,16 +230,44 @@
         <h4>Software Info</h4>
         <table>
           <tr>
-            <td style="width:20%;">OS :</td>
+            <td style="width:40%;"><li>OS :</li></td>
             <td>MacOS 12 Monterey</td>
+          </tr>
+          <tr>
+            <td><li>MS Office :</li></td>
+            <td>Version 2016</td>
           </tr>
         </table>
       </div>
+      <div class="xinfo">
+        <h4>Extra Info</h4>
+        <ul>
+          <li>Ninth-generation 6-core Intel Core i7 processor.</li>
+          <li>Stunning 40.65cm (16-inch) Retina display with True Tone technology.</li>
+          <li>Touch Bar and Touch ID.</li>
+          <li>AMD Radeon Pro 5300M graphics with GDDR6 memory.</li>
+          <li>Ultrafast SSD.</li>
+          <li>Intel UHD Graphics 630.</li>
+          <li>Six-speaker system with force-cancelling woofes.</li>
+          <li>Four Thunderbolt 3 (USB-C) ports.</li>
+          <li>Up to 11 hours of battery life.</li>
+          <li>802.11ac Wi-Fi.</li>
+        </ul>
+      </div>
+      <div class="pros-cons">
+        <h4>Pros</h4>
+        <ul>
+          <li>Super fast</li>
+          <li>Extremely long battery life</li>
+          <li>Powerful</li>
+        </ul><br>
+        <h4>Cons</h4>
+        <ul>
+          <li>Expensive</li>
+        </ul>
+      </div>
     </div>
-
   </section>
-
-
 
 <!---------------------------------------------------------------------------------------------------------------------------------------->
   <section>
@@ -187,6 +275,5 @@
       <p>&copy; 2022 Fahad Ahmed.</p>
     </div>
   </section>
-  
   </body>
 </html>
