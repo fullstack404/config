@@ -71,14 +71,14 @@
 }
     function addToFav(){
       if(document.getElementById("star").style.color == "white"){
-        document.getElementById("star").style.color = "yellow";
+        document.getElementById("star").style="color:yellow;right:210px;";
         document.getElementById("text").innerHTML="Remove from favorites";
-        document.getElementById("text").style.width="200px";
+        document.getElementById("text").style="width:200px;right:52px";
       } 
       else if(document.getElementById("star").style.color == "yellow"){
-        document.getElementById("star").style.color = "white";
+        document.getElementById("star").style="color:white;right:210px;";
         document.getElementById("text").innerHTML="Add to favorites";
-        document.getElementById("text").style.width="160px";
+        document.getElementById("text").style="width:160px;right:26px";
       }  
     }
   </script>
