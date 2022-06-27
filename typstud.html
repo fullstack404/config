@@ -68,11 +68,68 @@
 
   <div id="myaccount" class="account">
     <a href="javascript:void(0)" class="closebtna" onclick="closeNava()">×</a>
-    <a href="">Login</a>
-    <a href="">Signup</a>
+    <a href="#" onclick="document.getElementById('id02').style.display='block'">Login</a>
+    <a href="#" onclick="document.getElementById('id01').style.display='block'">Signup</a>>
   </div>
 </section>
 
+<!----Login and Signup------------------------------------------------------------------------------------------------------------------------------------>
+<div id="id01" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="E:\Website\media\user-m.png" alt="Avatar" class="avatar"><br><br>
+      <h1><b>SIGN UP</b></h1>
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+      <label for="psw"><b>Re-Enter the password</b></label>
+      <input type="password" placeholder="Re-Enter the password" name="psw" required><br><br>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:rgb(0, 15, 18)">
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+      <button style="background-color:green;" type="submit">Sign Up</button>
+      <button style="background-color:red; float:right;"  onclick="document.getElementById('id01').style.display='none'" type="submit">Cancel</button>
+    </div>
+  </form>
+</div>  
+
+<div id="id02" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="E:\Website\media\user-m.png" alt="Avatar" class="avatar"><br><br>
+      <h1><b>LOGIN</b></h1>
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+      <button style="background-color:green; width:100%" type="submit">Login</button><br>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:rgb(0, 15, 18)">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+
+  </form>
+</div>     
+<!----------------------------------------------------------------------------------------------------------------------------------------->   
+    
   <div class="bg-image"></div><br>
   <div class="bg-text">
     <h1>Student's Zone</h1><br>
