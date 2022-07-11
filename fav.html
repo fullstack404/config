@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
 
   <!-- External stylesheet link -->
-  <link rel="stylesheet" href="stylesheets\fav.css">
+  <link rel="stylesheet" href="E:\Website\stylesheets\fav.css">
   
   <!-- Side panel -->
   <script>
@@ -39,6 +39,14 @@
     
     function closeNava() {
       document.getElementById("myaccount").style.width = "0";
+    }
+
+    function deleteRow(r,n){
+      var row = document.getElementById(r);
+      row.deleteCell(n);
+      console.log(n);
+      var2 = document.getElementsByClassName("rows").length;
+      
     }
   </script>
 </head>
@@ -126,127 +134,106 @@
 <!----------------------------------------------------------------------------------------------------------------------------------------->   
   <section class="favorites">
       <table>
-          <tr>
-            <td>
+          <tr id="row1">
+            <td class="rows">
               <div class="favourites" id="fav1">
-                <img src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" alt="">
-                <div id="fav-1" class="remove">
-                  <span onclick="document.getElementById('fav1').style.display='none'">&times;</span>
-                </div>
+                <img src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" alt="">
                 <h6>LG GRAM 17</h6>
                 <p>Type: For Programming</p>
                 <p>Model year: 2021</p>
                 <p>Price: $1000</p>
+                <button onclick="deleteRow('row1',0)">&times; Remove</button>
               </div>
             </td>
-            <td>
+            <td class="rows"> 
               <div class="favourites" id="fav2">
-                <img src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" alt="">
-                <div id="fav-2" class="remove">
-                  <span onclick="document.getElementById('fav2').style.display='none'">&times;</span>
-                </div>
+                <img src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" alt="">
                 <h6>LG GRAM 17</h6>
                 <p>Type: For Programming</p>
                 <p>Model year: 2021</p>
                 <p>Price: $1000</p>
+                <button onclick="deleteRow('row1',1)">&times; Remove</button>
               </div>
             </td>
-            <td>
+            <td class="rows">
               <div class="favourites" id="fav3">
-                <img src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" alt="">
-                <div id="fav-3" class="remove">
-                  <span onclick="document.getElementById('fav3').style.display='none'">&times;</span>
-                </div>
+                <img src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" alt="">
                 <h6>LG GRAM 17</h6>
                 <p>Type: For Programming</p>
                 <p>Model year: 2021</p>
                 <p>Price: $1000</p>
+                <button onclick="deleteRow('row1',2)">&times; Remove</button>
               </div>
             </td>
-            <td>
+            <td class="rows">
               <div class="favourites" id="fav4">
-                <img src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" alt="">
-                <div id="fav-4" class="remove">
-                  <span onclick="document.getElementById('fav4').style.display='none'">&times;</span>
-                </div>
+                <img src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" alt="">
                 <h6>LG GRAM 17</h6>
                 <p>Type: For Programming</p>
                 <p>Model year: 2021</p>
                 <p>Price: $1000</p>
+                <button onclick="deleteRow('row1',3)">&times; Remove</button>
               </div>
             </td>
-            <td>
+            <td class="rows">
               <div class="favourites" id="fav5">
-                <img src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" alt=""> 
-                <div id="fav-5" class="remove">
-                  <span onclick="document.getElementById('fav5').style.display='none'">&times;</span>
-                </div>
+                <img src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" alt=""> 
                 <h6>LG GRAM 17</h6>
                 <p>Type: For Programming</p>
                 <p>Model year: 2021</p>
                 <p>Price: $1000</p>
+                <button onclick="deleteRow('row1',4)">&times; Remove</button>
               </div>
             </td>
-          </tr>
-          <tr>
-            <td>
+            <td class="break rows"></td>
+            <td class="rows">
               <div class="favourites" id="fav6">
-                <img src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" alt="">
-                <div id="fav-6" class="remove">
-                  &times;
-                </div>
+                <img src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" alt="">
                 <h6>LG GRAM 17</h6>
                 <p>Type: For Programming</p>
                 <p>Model year: 2021</p>
                 <p>Price: $1000</p>
+                <button onclick="deleteRow('row1',5)">&times; Remove</button>
               </div>
             </td>
-            <td>
+            <td class="rows">
               <div class="favourites" id="fav7">
-                <img src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" alt="">
-                <div id="fav-7" class="remove">
-                  <span onclick="document.getElementById('fav7').style.display='none'">&times;</span>
-                </div>
+                <img src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" alt="">
                 <h6>LG GRAM 17</h6>
                 <p>Type: For Programming</p>
                 <p>Model year: 2021</p>
                 <p>Price: $1000</p>
+                <button onclick="deleteRow('row1',6)">&times; Remove</button>
               </div>
             </td>
-            <td>
+            <td class="rows">
               <div class="favourites" id="fav8">
-                <img src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" alt="">
-                <div id="fav-8" class="remove">
-                  <span onclick="document.getElementById('fav8').style.display='none'">&times;</span>
-                </div>
+                <img src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" alt="">
                 <h6>LG GRAM 17</h6>
                 <p>Type: For Programming</p>
                 <p>Model year: 2021</p>
                 <p>Price: $1000</p>
+                <button onclick="deleteRow('row1',7)">&times; Remove</button>
               </div>
             </td>
-            <td>
+            <td class="rows">
               <div class="favourites" id="fav9">
-                <img src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" alt="">
-                <div id="fav-9" class="remove">
-                  <span onclick="document.getElementById('fav9').style.display='none'">&times;</span>
-                </div>
+                <img src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" alt="">
                 <h6>LG GRAM 17</h6>
                 <p>Type: For Programming</p>
                 <p>Model year: 2021</p>
                 <p>Price: $1000</p>
+                <button onclick="deleteRow('row1',8)">&times; Remove</button>
               </div>
             </td>
-            <td>
+            <td class="rows">
               <div class="favourites" id="fav10">
-                <img src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" alt="">
-                <div id="fav-10" class="remove">
-                  <span onclick="document.getElementById('fav10').style.display='none'">&times;</span>
-                </div>
+                <img src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" alt="">
                 <h6>LG GRAM 17</h6>
                 <p>Type: For Programming</p>
                 <p>Model year: 2021</p>
                 <p>Price: $1000</p>
+                <button onclick="deleteRow('row1',9)">&times; Remove</button>
               </div>
             </td>
           </tr>
@@ -257,6 +244,6 @@
       <p>&copy; 2022 Fahad Ahmed.</p>
     </div>
   </section>
-  
+
   </body>
   </html>

@@ -5,10 +5,11 @@
   <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.5">
   <meta charset="utf-8">
-  
+
   <!---Bootstrap link---->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
   <!-- Favicon link -->
   <link rel="icon" href="E:\Website\media\favicon.ico">
 
@@ -22,13 +23,13 @@
 
   <!-- External stylesheet link -->
   <link rel="stylesheet" href="stylesheets/view.css">
-  
+
   <!-- Side panel -->
   <script>
     function openNav() {
       document.getElementById("mySidepanel").style.width = "250px";
     }
-    
+
     function closeNav() {
       document.getElementById("mySidepanel").style.width = "0";
     }
@@ -36,106 +37,120 @@
     function openNava() {
       document.getElementById("myaccount").style.width = "250px";
     }
-    
+
     function closeNava() {
       document.getElementById("myaccount").style.width = "0";
     }
 
-    function addToFav(){
-      if(document.getElementById("star").style.color == "white"){
-        document.getElementById("star").style="color:yellow;";
-        document.getElementById("text").innerHTML="Remove from favourites";
-      } 
-      else if(document.getElementById("star").style.color == "yellow"){
-        document.getElementById("star").style="color:white;";
-        document.getElementById("text").innerHTML="Add to favourites";
-      }  
+    function addToFav() {
+      if (document.getElementById("star2").style.color == "white") {
+        document.getElementById("star2").style = "color:yellow;";
+        document.getElementById("text").innerHTML = "Remove from favourites";
+        var cls = document.getElementById("star2").className;
+        cls = cls.slice(0, 12);
+        document.getElementById("star2").className = cls + " add";
+        console.log(document.getElementById("star2").className);
+      }
+      else if (document.getElementById("star2").style.color == "yellow") {
+        document.getElementById("star2").style = "color:white;";
+        document.getElementById("text").innerHTML = "Add to favourites";
+        var cls = document.getElementById("star2").className;
+        cls = cls.slice(0, 12);
+        document.getElementById("star2").className = cls + " rem";
+        console.log(document.getElementById("star2").className);
+
+      }
     }
   </script>
 </head>
 <!---------------------------------------------------------------------------------------------------------------------------------------->
+
 <body>
   <section>
-  <div class="horizontal-menu">
-    <i style="left:15px; top:13px;" class="fa-solid fa-bars openbtn" onclick="openNav()"></i>
-    <img class="logo" src="media\CONFIGURE.png" alt=""> 
-    <input type="text" placeholder=" Search Laptops..." >
-    <i style="left:820px; top:13px; color:#1E90FF;" class="fa-solid fa-magnifying-glass"></i>
-    <a href="fav.html"><i class="fas fa-star" style="right:50px; top:13px;"></i></a>
-    <i style="right: 15px; top:13px;" class="fa-solid fa-user openbtn" onclick="openNava()"></i>
-  </div>
-  
-  <div id="mySidepanel" class="sidepanel">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-    <a href="home_page.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
+    <div class="horizontal-menu">
+      <i class="fa-solid fa-bars openbtn" id="sidebar" onclick="openNav()"></i>
+      <img id="logo" src="E:\Website\media\CONFIGURE.png" alt="">
+      <input type="text" id="searchbox" placeholder=" Search Laptops..." >
+      <i id="search" class="fa-solid fa-magnifying-glass"></i>
+      <a href="fav.html"><i id="star" class="fas fa-star" ></a></i>
+      <i class="fa-solid fa-user openbtn" id="user" onclick="openNava()"></i>
+    </div>
 
-   <div id="myaccount" class="account">
-     <a href="javascript:void(0)" class="closebtna" onclick="closeNava()">×</a>
-     <a href="#" onclick="document.getElementById('id02').style.display='block'">Login</a>
-     <a href="#" onclick="document.getElementById('id01').style.display='block'">Signup</a>
+    <div id="mySidepanel" class="sidepanel">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="home_page.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div id="myaccount" class="account">
+      <a href="javascript:void(0)" class="closebtna" onclick="closeNava()">×</a>
+      <a href="#" onclick="document.getElementById('id02').style.display='block'">Login</a>
+      <a href="#" onclick="document.getElementById('id01').style.display='block'">Signup</a>
     </div>
   </section>
 
-<!----Login and Signup------------------------------------------------------------------------------------------------------------------------------------>
-<div id="id01" class="modal">
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="E:\Website\media\user-m.png" alt="Avatar" class="avatar"><br><br>
-      <h1><b>SIGN UP</b></h1>
-    </div>
+  <!----Login and Signup------------------------------------------------------------------------------------------------------------------------------------>
+  <div id="id01" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="E:\Website\media\user-m.png" alt="Avatar" class="avatar"><br><br>
+        <h1><b>SIGN UP</b></h1>
+      </div>
 
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required><br><br>
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required><br><br>
-      <label for="psw"><b>Re-Enter the password</b></label>
-      <input type="password" placeholder="Re-Enter the password" name="psw" required><br><br>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+        <label for="psw"><b>Re-Enter the password</b></label>
+        <input type="password" placeholder="Re-Enter the password" name="psw" required><br><br>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
 
-    <div class="container" style="background-color:rgb(0, 15, 18)">
-      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-      <button style="background-color:green;" type="submit">Sign Up</button>
-      <button style="background-color:red; float:right;"  onclick="document.getElementById('id01').style.display='none'" type="submit">Cancel</button>
-    </div>
-  </form>
-</div>  
+      <div class="container" style="background-color:rgb(0, 15, 18)">
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+        <button style="background-color:green;" type="submit">Sign Up</button>
+        <button style="background-color:red; float:right;"
+          onclick="document.getElementById('id01').style.display='none'" type="submit">Cancel</button>
+      </div>
+    </form>
+  </div>
 
-<div id="id02" class="modal">
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="E:\Website\media\user-m.png" alt="Avatar" class="avatar"><br><br>
-      <h1><b>LOGIN</b></h1>
-    </div>
+  <div id="id02" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="E:\Website\media\user-m.png" alt="Avatar" class="avatar"><br><br>
+        <h1><b>LOGIN</b></h1>
+      </div>
 
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required><br><br>
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required><br><br>
-      <button style="background-color:green; width:100%" type="submit">Login</button><br>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+        <button style="background-color:green; width:100%" type="submit">Login</button><br>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
 
-    <div class="container" style="background-color:rgb(0, 15, 18)">
-      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
+      <div class="container" style="background-color:rgb(0, 15, 18)">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'"
+          class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
 
-  </form>
-</div> 
+    </form>
+  </div>
 
-<!----Single Image Display section------------------------------------------------------------------------------------------------------------------------------------>
+  <!----Single Image Display section------------------------------------------------------------------------------------------------------------------------------------>
   <section>
     <div id="slide-container">
       <div class="slides">
@@ -171,88 +186,112 @@
 
     </div>
 
-      <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a>
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
 
-<!--Multile Images Display section-------------------------------------------------------------------------------------------------------->
-<div class="multi-imgs">
-  <img class="demo" src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" onclick="currentSlide(1)">
-  <img class="demo" src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" onclick="currentSlide(2)">
-  <img class="demo" src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" onclick="currentSlide(3)">
-  <img class="demo" src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" onclick="currentSlide(4)">
-  <img class="demo" src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" onclick="currentSlide(5)">
-  <img class="demo" src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" onclick="currentSlide(6)">
-  <img class="demo" src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" onclick="currentSlide(7)">
-  <img class="demo" src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" onclick="currentSlide(8)">
-  <img class="demo" src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" onclick="currentSlide(9)">
-  <img class="demo" src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" onclick="currentSlide(10)">
-</div>
+    <!--Multile Images Display section-------------------------------------------------------------------------------------------------------->
+    <div class="multi-imgs">
+      <img class="demo" src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" onclick="currentSlide(1)">
+      <img class="demo" src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" onclick="currentSlide(2)">
+      <img class="demo" src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" onclick="currentSlide(3)">
+      <img class="demo" src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" onclick="currentSlide(4)">
+      <img class="demo" src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" onclick="currentSlide(5)">
+      <img class="demo" src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" onclick="currentSlide(6)">
+      <img class="demo" src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" onclick="currentSlide(7)">
+      <img class="demo" src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" onclick="currentSlide(8)">
+      <img class="demo" src="E:\Website\media\61Y30DpqRVL._SL1500_.jpg" onclick="currentSlide(9)">
+      <img class="demo" src="E:\Website\media\61NV-Wb1iSL._SL1500_.jpg" onclick="currentSlide(10)">
+    </div>
 
-<!--Information section------------------------------------------------------------------------------------------------------------------->
+    <!--Information section------------------------------------------------------------------------------------------------------------------->
     <div class="info">
-      <h5 style="text-align:center;">01. <span class="name">Apple MACBOOK PRO</span></h5><br><br>
+      <h5 style="text-align:center;"><span class="name">Apple MACBOOK PRO</span></h5><br><br>
       <div class="fav">
-        <i id="star" style="color:white" class="fas fa-star" onclick="addToFav()"></i>
+        <i id="star2" style="color:white" class="fas fa-star" onclick="addToFav()"></i>
         <div style="position:absolute;right:115px;bottom:78px;">
           <span id="text" class="tooltiptext">Add to favourites</span>
         </div>
-      </div>  
-    <div class="info1">
-      <h4>General Info</h4>
-      <table>
-        <tr>
-          <ul>
-          <td style="width:40%"><li>Brand :</li></td>
-          <td >Apple</td>
-        </tr>
-        <tr>
-          <td><li>Model :</li></td>
-          <td>MAC BOOK PRO</td>
-        </tr>
-        <tr>
-          <td><li>Price :</li></td>
-          <td>$1000</td>
-        </tr>
-        <tr>
-          <td><li>Weight :</li></td>
-          <td>3 KG</td>
-        </tr>
-        <tr>
-          <td><li>Size :</li></td>
-          <td>16 inch</td>
-        </tr>
-        <tr>
-          <td><li>Color :</li></td>
-          <td>Silver</td>
-        </ul>
-        </tr>
-      </table>
+      </div>
+      <div class="info1">
+        <h4>General Info</h4>
+        <table>
+          <tr>
+            <ul>
+              <td style="width:40%">
+                <li>Brand :</li>
+              </td>
+              <td>Apple</td>
+          </tr>
+          <tr>
+            <td>
+              <li>Model :</li>
+            </td>
+            <td>MAC BOOK PRO</td>
+          </tr>
+          <tr>
+            <td>
+              <li>Price :</li>
+            </td>
+            <td>$1000</td>
+          </tr>
+          <tr>
+            <td>
+              <li>Weight :</li>
+            </td>
+            <td>3 KG</td>
+          </tr>
+          <tr>
+            <td>
+              <li>Size :</li>
+            </td>
+            <td>16 inch</td>
+          </tr>
+          <tr>
+            <td>
+              <li>Color :</li>
+            </td>
+            <td>Silver</td>
+            </ul>
+          </tr>
+        </table>
       </div>
       <div class="info1">
         <h4>Hardware Info</h4>
         <table>
           <tr>
-            <td style="width:60%"><li>Processor :</li></td>
+            <td style="width:60%">
+              <li>Processor :</li>
+            </td>
             <td>Apple M1 Pro</td>
           </tr>
           <tr>
-            <td><li>RAM :</li></td>
+            <td>
+              <li>RAM :</li>
+            </td>
             <td>Upto 64 GB</td>
           </tr>
           <tr>
-            <td><li>Storage :</li></td>
+            <td>
+              <li>Storage :</li>
+            </td>
             <td>1 TB</td>
           </tr>
           <tr>
-            <td><li>Battery life :</li></td>
+            <td>
+              <li>Battery life :</li>
+            </td>
             <td>Upto 21 hours</td>
           </tr>
           <tr>
-            <td><li>Graphics :</li></td>
+            <td>
+              <li>Graphics :</li>
+            </td>
             <td>16 Core GPU</td>
           </tr>
           <tr>
-            <td><li>Screen Quality :</li></td>
+            <td>
+              <li>Screen Quality :</li>
+            </td>
             <td>Liquid Retina XDR display</td>
           </tr>
         </table>
@@ -261,11 +300,15 @@
         <h4>Software Info</h4>
         <table>
           <tr>
-            <td style="width:40%;"><li>OS :</li></td>
+            <td style="width:40%;">
+              <li>OS :</li>
+            </td>
             <td>MacOS 12 Monterey</td>
           </tr>
           <tr>
-            <td><li>MS Office :</li></td>
+            <td>
+              <li>MS Office :</li>
+            </td>
             <td>Version 2016</td>
           </tr>
         </table>
@@ -300,21 +343,21 @@
     </div>
   </section>
 
-<!---------------------------------------------------------------------------------------------------------------------------------------->
+  <!---------------------------------------------------------------------------------------------------------------------------------------->
   <section>
-    <div class="copy-rights"> 
+    <div class="copy-rights">
       <p>&copy; 2022 Fahad Ahmed.</p>
     </div>
   </section>
 
-<!--------------------------------------------------------------------------------------------------------------------------------------->  
+  <!--------------------------------------------------------------------------------------------------------------------------------------->
   <script>
     let slideIndex = 1;
     showSlides(slideIndex)
 
     function plusSlides(n) {
-       showSlides(slideIndex += n);
-      }
+      showSlides(slideIndex += n);
+    }
 
     function currentSlide(n) {
       showSlides(slideIndex = n);
@@ -324,16 +367,18 @@
       let i;
       let slides = document.getElementsByClassName("slides");
       let slides1 = document.getElementsByClassName("demo");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+
       for (i = 0; i < slides.length; i++) {
-         slides[i].style.display = "none";
-         slides1[i].style="opacity:0.6";
+        slides[i].style.display = "none";
+        slides1[i].style = "opacity:0.6";
       }
-      slides[slideIndex-1].style.display = "block";
-      slides1[slideIndex-1].style="opacity:1; box-shadow: 4px 4px 8px 0 #1E90FF, 4px 6px 20px 0 #1E90FF;";
-}
+
+      slides[slideIndex - 1].style.display = "block";
+      slides1[slideIndex - 1].style = "opacity:1; box-shadow: 4px 4px 8px 0 #1E90FF, 4px 6px 20px 0 #1E90FF;";
+    }
   </script>
-  </body>
+</body>
+
 </html>
