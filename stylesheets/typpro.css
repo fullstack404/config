@@ -1,3 +1,9 @@
+:root {
+  --bgcolor: #1E90FF;
+  --textcolor: white;
+  --font: Montserrat;
+}
+
 body, html {
     height: 100%;
     background-color:  rgb(0, 15, 18);
@@ -22,14 +28,51 @@ body, html {
     cursor:pointer;
     color: white;
 }
-
-.logo{
-    display: inline-block;
-    width:15%;
-    position:relative;
-    left:300px;
-    bottom:24px;
+#sidebar,
+#search,
+#star,
+#user {
+  position: absolute;
+  top: 15px;
 }
+
+#sidebar {
+  left: 15px;
+}
+
+#logo {
+  display: inline-block;
+  width: 15%;
+  position: relative;
+  bottom: 23px;
+  left: 310px;
+}
+
+#searchbox {
+  border: none;
+  height: 35px;
+  width: 400px;
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  top: 6px;
+  left: 450px;
+  padding: 12px 12px;
+}
+
+#search {
+  color: var(--bgcolor);
+  left: 820px;
+}
+
+#star {
+  right: 50px;
+}
+
+#user {
+  right: 15px;
+}
+
 
 .horizontal-menu input[type=text] {
     border: none;
@@ -48,7 +91,7 @@ body, html {
     width: 0;
     position: fixed;
     z-index: 3;
-    height: 600px;
+    height: 100%;
     top: 0;
     left:0;
     background-color: #111;
@@ -83,7 +126,7 @@ body, html {
     width: 0;
     position: fixed;
     z-index: 3;
-    height: 600px;
+    height: 100%;
     top: 0;
     right: 0;
     background-color: #111;
@@ -325,4 +368,68 @@ body, html {
 
 .copy-rights p{
     padding:15px 0 10px 10px;
+}
+/****************************************************************************************************/
+@media screen and (max-width:480px) {
+  body {
+    margin: 0;
+    width: 480px;
+  }
+
+  .horizontal-menu i {
+    font-size: large;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  #sidebar {
+    left: 15px;
+  }
+
+  #logo {
+    width: 35%;
+    left: 20px;
+    bottom: 17px;
+  }
+
+  #searchbox {
+    width: 250px;
+    height: 30px;
+    top: 10px;
+    left: 140px;
+  }
+
+  #search {
+    color: var(--bgcolor);
+    left: 360px;
+  }
+
+  #star {
+    right: 45px;
+  }
+
+  #user {
+    right: 15px;
+  }
+  .modal-content{
+    width:350px;
+  }
+  .bg-image{
+    width:480px;
+    height:900px;
+ }
+ 
+ .bg-text{
+    width:430px;
+    height:740px;
+    top:500px;
+    left:240px;
+    padding:30px 20px 50px 20px;
+ }
+
+ .explore{
+  width:210px;
+  font-size:20px;
+ }
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title></title>
+  <title>CONFIG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.5">
   <meta charset="utf-8">
   
@@ -21,28 +21,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
 
   <!-- External stylesheet link -->
-  <link rel="stylesheet" href="stylesheets\common.css">
+  <link rel="stylesheet" href="stylesheets\typgame.css">
   
   <!-- Side panel -->
-  <script src="E:\Website\slides.js">
+  <script>
+       function openNav() {
+      document.getElementById("mySidepanel").style.width = "230px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidepanel").style.width = "0";
+    }
+
+    function openNava() {
+      document.getElementById("myaccount").style.width = "230px";
+    }
+
+    function closeNava() {
+      document.getElementById("myaccount").style.width = "0";
+    }
   </script>
   <style>
     .bg-image{
-      background-image: url("E:/Website/media/best-hp-gaming-laptops-for-any-budget-hero1531871685786.jpg");
+      background-image: url("media/best-hp-gaming-laptops-for-any-budget-hero1531871685786.jpg");
     }
   </style>
 </head>
 <!---------------------------------------------------------------------------------------------------------------------------------------->
 <body>
   <section>
-  <div class="horizontal-menu">
-    <i style="left:15px; top:13px;" class="fa-solid fa-bars openbtn" onclick="openNav()"></i>
-    <img class="logo" src="media\CONFIGURE.png" alt=""> 
-    <input type="text" placeholder=" Search Laptops..." >
-    <i style="left:820px; top:13px; color:#1E90FF;" class="fa-solid fa-magnifying-glass"></i>
-    <a href="fav.html"><i class="fas fa-star" style="right:50px; top:13px;"></a></i>
-    <i style="right: 15px; top:13px;" class="fa-solid fa-user openbtn" onclick="openNava()"></i>
-  </div>
+    <div class="horizontal-menu">
+      <i class="fa-solid fa-bars openbtn" id="sidebar" onclick="openNav()"></i>
+      <img id="logo" src="media\CONFIGURE.png" alt="">
+      <input type="text" id="searchbox" placeholder=" Search Laptops...">
+      <i id="search" class="fa-solid fa-magnifying-glass"></i>
+      <a href="fav.html"><i id="star" class="fas fa-star"></i></a>
+      <i class="fa-solid fa-user openbtn" id="user" onclick="openNava()"></i>
+    </div>
   
   <div id="mySidepanel" class="sidepanel">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -62,8 +77,8 @@
   <form class="modal-content animate" action="/action_page.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="E:\Website\media\user-m.png" alt="Avatar" class="avatar"><br><br>
-      <h1><b>SIGN UP</b></h1>
+      <img src="media\user-m.png" alt="Avatar" class="avatar"><br><br>
+      <h1 style="margin-top:30px"><b>SIGN UP</b></h1>
     </div>
 
     <div class="container">
@@ -90,8 +105,8 @@
   <form class="modal-content animate" action="/action_page.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="E:\Website\media\user-m.png" alt="Avatar" class="avatar"><br><br>
-      <h1><b>LOGIN</b></h1>
+      <img src="media\user-m.png" alt="Avatar" class="avatar"><br><br>
+      <h1 style="margin-top:30px"><b>LOGIN</b></h1>
     </div>
 
     <div class="container">

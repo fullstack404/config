@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
-  <title></title>
+  <title>CONFIG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.5">
   <meta charset="utf-8">
-  
+
   <!---Bootstrap link---->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
   <!-- Favicon link -->
   <link rel="icon" href="E:\Website\media\favicon.ico">
 
@@ -21,67 +22,69 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
 
   <!-- External stylesheet link -->
-  <link rel="stylesheet" href="stylesheets\common.css">
-  
+  <link rel="stylesheet" href="stylesheets\typpro.css">
+
   <!-- Side panel -->
   <script>
     function openNav() {
-      document.getElementById("mySidepanel").style.width = "250px";
+      document.getElementById("mySidepanel").style.width = "230px";
     }
-    
+
     function closeNav() {
       document.getElementById("mySidepanel").style.width = "0";
     }
 
     function openNava() {
-      document.getElementById("myaccount").style.width = "250px";
+      document.getElementById("myaccount").style.width = "230px";
     }
-    
+
     function closeNava() {
       document.getElementById("myaccount").style.width = "0";
     }
   </script>
 
   <style>
-    .bg-image{
-      background-image: url("E:/Website/media/1_2db8F59LEiO6VfX0fJDpgA.jpeg");
+    .bg-image {
+      background-image: url("media/1_2db8F59LEiO6VfX0fJDpgA.jpeg");
     }
   </style>
 </head>
 <!---------------------------------------------------------------------------------------------------------------------------------------->
+
 <body>
   <section>
-  <div class="horizontal-menu">
-    <i style="left:15px; top:13px;" class="fa-solid fa-bars openbtn" onclick="openNav()"></i>
-    <img class="logo" src="media\CONFIGURE.png" alt=""> 
-    <input type="text" placeholder=" Search Laptops..." >
-    <i style="left:820px; top:13px; color:#1E90FF;" class="fa-solid fa-magnifying-glass"></i>
-    <a href="fav.html"><i class="fas fa-star" style="right:50px; top:13px;"></a></i>
-    <i style="right: 15px; top:13px;" class="fa-solid fa-user openbtn" onclick="openNava()"></i>
-  </div>
-      
-  <div id="mySidepanel" class="sidepanel">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-    <a href="main.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
+    <div class="horizontal-menu">
+      <i class="fa-solid fa-bars openbtn" id="sidebar" onclick="openNav()"></i>
+      <img id="logo" src="media\CONFIGURE.png" alt="">
+      <input type="text" id="searchbox" placeholder=" Search Laptops...">
+      <i id="search" class="fa-solid fa-magnifying-glass"></i>
+      <a href="fav.html"><i id="star" class="fas fa-star"></i></a>
+      <i class="fa-solid fa-user openbtn" id="user" onclick="openNava()"></i>
+    </div>
 
-  <div id="myaccount" class="account">
-    <a href="javascript:void(0)" class="closebtna" onclick="closeNava()">×</a>
-    <a href="#" onclick="document.getElementById('id02').style.display='block'">Login</a>
-    <a href="#" onclick="document.getElementById('id01').style.display='block'">Signup</a>
-  </div>
-</section>
+    <div id="mySidepanel" class="sidepanel">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="main.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div id="myaccount" class="account">
+      <a href="javascript:void(0)" class="closebtna" onclick="closeNava()">×</a>
+      <a href="#" onclick="document.getElementById('id02').style.display='block'">Login</a>
+      <a href="#" onclick="document.getElementById('id01').style.display='block'">Signup</a>
+    </div>
+  </section>
   <!----Login and Signup------------------------------------------------------------------------------------------------------------------------------------>
   <div id="id01" class="modal">
     <form class="modal-content animate" action="/action_page.php" method="post">
       <div class="imgcontainer">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <img src="E:\Website\media\user-m.png" alt="Avatar" class="avatar"><br><br>
-        <h1><b>SIGN UP</b></h1>
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="media\user-m.png" alt="Avatar" class="avatar"><br><br>
+        <h1 style="margin-top:30px"><b>SIGN UP</b></h1>
       </div>
-  
+
       <div class="container">
         <label for="uname"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="uname" required><br><br>
@@ -93,23 +96,25 @@
           <input type="checkbox" checked="checked" name="remember"> Remember me
         </label>
       </div>
-  
+
       <div class="container" style="background-color:rgb(0, 15, 18)">
         <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
         <button style="background-color:green;" type="submit">Sign Up</button>
-        <button style="background-color:red; float:right;"  onclick="document.getElementById('id01').style.display='none'" type="submit">Cancel</button>
+        <button style="background-color:red; float:right;"
+          onclick="document.getElementById('id01').style.display='none'" type="submit">Cancel</button>
       </div>
     </form>
-  </div>  
-  
+  </div>
+
   <div id="id02" class="modal">
     <form class="modal-content animate" action="/action_page.php" method="post">
       <div class="imgcontainer">
-        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <img src="E:\Website\media\user-m.png" alt="Avatar" class="avatar"><br><br>
-        <h1><b>LOGIN</b></h1>
+        <span onclick="document.getElementById('id02').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="media\user-m.png" alt="Avatar" class="avatar"><br><br>
+        <h1 style="margin-top:30px"><b>LOGIN</b></h1>
       </div>
-  
+
       <div class="container">
         <label for="uname"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="uname" required><br><br>
@@ -120,29 +125,35 @@
           <input type="checkbox" checked="checked" name="remember"> Remember me
         </label>
       </div>
-  
+
       <div class="container" style="background-color:rgb(0, 15, 18)">
-        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="button" onclick="document.getElementById('id02').style.display='none'"
+          class="cancelbtn">Cancel</button>
         <span class="psw">Forgot <a href="#">password?</a></span>
       </div>
-  
+
     </form>
-  </div> 
+  </div>
   <div class="bg-image"></div><br>
   <div class="bg-text">
     <h1>Programmer's Zone</h1><br>
     <p>
-      If you're looking for the best laptops for programming, then you've come to the right place. On this page, you'll find a range of great devices that will making coding a joy.
-      These days, many of us are splitting our work lives between the office and home, and that means laptops have become more essential than ever before, allowing you to easily work pretty much anywhere.
-      While you don't always need a powerful laptop for coding on, investing in a laptop with cutting-edge components can still be very beneficial. The more powerful the laptop, the faster it'll be at compiling and testing code, and this can drastically speed up your workflow. 
+      If you're looking for the best laptops for programming, then you've come to the right place. On this page, you'll
+      find a range of great devices that will making coding a joy.
+      These days, many of us are splitting our work lives between the office and home, and that means laptops have
+      become more essential than ever before, allowing you to easily work pretty much anywhere.
+      While you don't always need a powerful laptop for coding on, investing in a laptop with cutting-edge components
+      can still be very beneficial. The more powerful the laptop, the faster it'll be at compiling and testing code, and
+      this can drastically speed up your workflow.
       That means less waiting around, and more time taking on other projects.
     </p>
     <button type="button" class="explore"><span><a href="view.html"> Click to explore! </a></span></button>
   </div>
 
-  <div class="copy-rights"> 
+  <div class="copy-rights">
     <p>&copy; 2022 Fahad Ahmed.</p>
   </div>
-  
+
 </body>
+
 </html>
