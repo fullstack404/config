@@ -11,7 +11,7 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <!-- Favicon link -->
-  <link rel="icon" href="E:\Website\media\favicon.ico">
+  <link rel="icon" href="media\favicon.ico">
 
   <!-- Font Awesome icons link -->
   <script src="https://kit.fontawesome.com/562a44d30d.js" crossorigin="anonymous"></script>
@@ -22,25 +22,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
 
   <!-- External stylesheet link -->
+  <link rel="stylesheet" href="stylesheets\similar.css">
   <link rel="stylesheet" href="stylesheets/view.css">
 
   <!-- Side panel -->
+  <script src="JS\sidebar.js"></script>
+
   <script>
-    function openNav() {
-      document.getElementById("mySidepanel").style.width = "230px";
-    }
-
-    function closeNav() {
-      document.getElementById("mySidepanel").style.width = "0";
-    }
-
-    function openNava() {
-      document.getElementById("myaccount").style.width = "230px";
-    }
-
-    function closeNava() {
-      document.getElementById("myaccount").style.width = "0";
-    }
 
     function addToFav() {
       if (document.getElementById("star2").style.color == "white") {
@@ -58,7 +46,6 @@
         cls = cls.slice(0, 12);
         document.getElementById("star2").className = cls + " rem";
         console.log(document.getElementById("star2").className);
-
       }
     }
   </script>
@@ -70,9 +57,9 @@
     <div class="horizontal-menu">
       <i class="fa-solid fa-bars openbtn" id="sidebar" onclick="openNav()"></i>
       <img id="logo" src="media\CONFIGURE.png" alt="">
-      <input type="text" id="searchbox" placeholder=" Search Laptops..." >
+      <input type="text" id="searchbox" placeholder=" Search Laptops...">
       <i id="search" class="fa-solid fa-magnifying-glass"></i>
-      <a href="fav.html"><i id="star" class="fas fa-star" ></a></i>
+      <a href="fav.html"><i id="star" class="fas fa-star"></a></i>
       <i class="fa-solid fa-user openbtn" id="user" onclick="openNava()"></i>
     </div>
 

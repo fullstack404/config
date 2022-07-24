@@ -26,23 +26,8 @@
   <link rel="stylesheet" href="stylesheets\home_page.css">
 
   <!-- Side panel -->
-  <script>
-    function openNav() {
-      document.getElementById("mySidepanel").style.width = "230px";
-    }
-
-    function closeNav() {
-      document.getElementById("mySidepanel").style.width = "0";
-    }
-
-    function openNava() {
-      document.getElementById("myaccount").style.width = "230px";
-    }
-
-    function closeNava() {
-      document.getElementById("myaccount").style.width = "0";
-    }
-  </script>
+  <script src="JS\sidebar.js"></script>
+  
 </head>
 <!---------------------------------------------------------------------------------------------------------------------------------------->
 
@@ -122,7 +107,7 @@
         </label>
       </div>
 
-      <div class="container" style="background-color:rgb(0, 15, 18)">
+      <div class="container" style="background-color:rgb(0, 15, 18);">
         <button type="button" onclick="document.getElementById('id02').style.display='none'"
           class="cancelbtn">Cancel</button>
         <span class="psw">Forgot <a href="#">password?</a></span>
@@ -157,5 +142,4 @@
   </section>
 
 </body>
-
 </html>

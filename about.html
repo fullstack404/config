@@ -5,12 +5,13 @@
   <title>CONFIG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.5">
   <meta charset="utf-8">
-  
+
   <!---Bootstrap link---->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
   <!-- Favicon link -->
-  <link rel="icon" href="E:\Website\media\favicon.ico">
+  <link rel="icon" href="media\favicon.ico">
 
   <!-- Font Awesome icons link -->
   <script src="https://kit.fontawesome.com/562a44d30d.js" crossorigin="anonymous"></script>
@@ -21,118 +22,113 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
 
   <!-- External stylesheet link -->
+  <link rel="stylesheet" href="stylesheets\similar.css">
   <link rel="stylesheet" href="stylesheets\about.css">
-  
+
   <!-- Side panel -->
-  <script>
-    function openNav() {
-      document.getElementById("mySidepanel").style.width = "250px";
-    }
-    
-    function closeNav() {
-      document.getElementById("mySidepanel").style.width = "0";
-    }
+  <script src="JS\sidebar.js"></script>
 
-    function openNava() {
-      document.getElementById("myaccount").style.width = "250px";
-    }
-    
-    function closeNava() {
-      document.getElementById("myaccount").style.width = "0";
-    }
-  </script>
 </head>
+
 <body>
-    <section>
-        <div class="horizontal-menu">
-          <i style="left:15px; top:13px;" class="fa-solid fa-bars openbtn" onclick="openNav()"></i>
-          <img class="logo" src="media\CONFIGURE.png" alt=""> 
-          <input type="text" placeholder=" Search Laptops..." >
-          <i style="left:820px; top:13px; color:#1E90FF;" class="fa-solid fa-magnifying-glass"></i>
-          <a href="fav.html"><i class="fas fa-star" style="right:50px; top:13px;"></a></i>
-          <i style="right: 15px; top:13px;" class="fa-solid fa-user openbtn" onclick="openNava()"></i>
-        </div>
-        
-        <div id="mySidepanel" class="sidepanel">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-          <a href="home_page.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      
-        <div id="myaccount" class="account">
-           <a href="javascript:void(0)" class="closebtna" onclick="closeNava()">×</a>
-           <a href="#" onclick="document.getElementById('id02').style.display='block'">Login</a>
-     <a href="#" onclick="document.getElementById('id01').style.display='block'">Signup</a>
-        </div>
-    </section>
-<!----Login and Signup------------------------------------------------------------------------------------------------------------------------------------>
-<div id="id01" class="modal">
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="E:\Website\media\user-m.png" alt="Avatar" class="avatar"><br><br>
-      <h1><b>SIGN UP</b></h1>
+  <section>
+    <div class="horizontal-menu">
+      <i class="fa-solid fa-bars openbtn" id="sidebar" onclick="openNav()"></i>
+      <img id="logo" src="media\CONFIGURE.png" alt="">
+      <input type="text" id="searchbox" placeholder=" Search Laptops...">
+      <i id="search" class="fa-solid fa-magnifying-glass"></i>
+      <a href="fav.html"><i id="star" class="fas fa-star"></i></a>
+      <i class="fa-solid fa-user openbtn" id="user" onclick="openNava()"></i>
     </div>
 
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required><br><br>
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required><br><br>
-      <label for="psw"><b>Re-Enter the password</b></label>
-      <input type="password" placeholder="Re-Enter the password" name="psw" required><br><br>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
+
+    <div id="mySidepanel" class="sidepanel">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="home_page.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </div>
 
-    <div class="container" style="background-color:rgb(0, 15, 18)">
-      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-      <button style="background-color:green;" type="submit">Sign Up</button>
-      <button style="background-color:red; float:right;"  onclick="document.getElementById('id01').style.display='none'" type="submit">Cancel</button>
+    <div id="myaccount" class="account">
+      <a href="javascript:void(0)" class="closebtna" onclick="closeNava()">×</a>
+      <a href="#" onclick="document.getElementById('id02').style.display='block'">Login</a>
+      <a href="#" onclick="document.getElementById('id01').style.display='block'">Signup</a>
     </div>
-  </form>
-</div>  
-
-<div id="id02" class="modal">
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="E:\Website\media\user-m.png" alt="Avatar" class="avatar"><br><br>
-      <h1><b>LOGIN</b></h1>
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required><br><br>
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required><br><br>
-      <button style="background-color:green; width:100%" type="submit">Login</button><br>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:rgb(0, 15, 18)">
-      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-
-  </form>
-</div>     
-<!----------------------------------------------------------------------------------------------------------------------------------------->   
-    <section class="intro">
-      <video autoplay muted loop id="myVideo">
-        <source src="media\CONFIGURE ! (1).mp4" type="video/mp4">
-      </video>
-      <p>CONFIG is a website, designed to diffrentiate wide range of laptops available in the market based on user needs. CONFIG helps you to find the right laptop with the best configuration, whether it's for geeky programmers, gaming freaks, business professionals, creative designers, or college students.</p>
-    </section>
-    <section>
-      <div class="copy-rights">
-        <p>&copy; 2022 Fahad Ahmed.</p>
+  </section>
+  <!----Login and Signup------------------------------------------------------------------------------------------------------------------------------------>
+  <div id="id01" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="media\user-m.png" alt="Avatar" class="avatar"><br><br>
+        <h1 style="margin-top:20px"><b>SIGN UP</b></h1>
       </div>
-    </section>   
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+        <label for="psw"><b>Re-Enter the password</b></label>
+        <input type="password" placeholder="Re-Enter the password" name="psw" required><br><br>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+
+      <div class="container" style="background-color:rgb(0, 15, 18)">
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+        <button style="background-color:green;" type="submit">Sign Up</button>
+        <button style="background-color:red; float:right;"
+          onclick="document.getElementById('id01').style.display='none'" type="submit">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="id02" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="media\user-m.png" alt="Avatar" class="avatar"><br><br>
+        <h1 style="margin-top:20px"><b>LOGIN</b></h1>
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+        <button style="background-color:green; width:100%" type="submit">Login</button><br>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+
+      <div class="container" style="background-color:rgb(0, 15, 18)">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'"
+          class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+
+    </form>
+  </div>
+  <!----------------------------------------------------------------------------------------------------------------------------------------->
+  <section class="intro">
+    <video autoplay muted loop id="myVideo">
+      <source src="media/CONFIGURE ! (1).mp4" type="video/mp4">
+    </video>
+    <p>CONFIG is a website, designed to diffrentiate wide range of laptops available in the market based on user needs.
+      CONFIG helps you to find the right laptop with the best configuration, whether it's for geeky programmers, gaming
+      freaks, business professionals, creative designers, or college students.</p>
+  </section>
+  <section>
+    <div class="copy-rights">
+      <p>&copy; 2022 Fahad Ahmed.</p>
+    </div>
+  </section>
 
 </body>
+
 </html>
