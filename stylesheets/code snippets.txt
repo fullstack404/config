@@ -1,0 +1,79 @@
+
+/********************Hides a scrollbar****************************************************************/
+
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-button {
+  width: 1px;
+  height: 1px;
+}
+
+/****************************************************************************************************/
+
+
+ var imgCount = document.getElementsByClassName("demo").length;
+    console.log(imgCount);
+    if(imgCount < 10){
+      document.getElementById("more").style.display="none";
+    }
+ <i class="fas fa-filter filter"></i>
+
+      <li><input type="checkbox" id="" name="" value="">
+                        <label for=""></label><br></li>
+
+
+                         <ul>
+                <li><input type="checkbox" id="apple" name="apple" value="apple">
+                    <label for="apple">Apple</label>
+                </li>
+                <li><input type="checkbox" id="hp" name="hp" value="hp">
+                    <label for="hp">HP</label>
+                </li>
+                <li><input type="checkbox" id="dell" name="dell" value="dell">
+                    <label for="dell">Dell</label>
+                </li>
+                <li><input type="checkbox" id="lenovo" name="lenovo" value="lenovo">
+                    <label for="lenovo">Lenovo</label>
+                </li>
+                <li><input type="checkbox" id="asus" name="asus" value="asus">
+                    <label for="asus">Asus</label><br>
+                </li>
+                <li><input type="checkbox" id="lg" name="lg" value="lg">
+                    <label for="lg">LG</label><br>
+                </li>
+                <li><input type="checkbox" id="samsung" name="samsung" value="samsung">
+                    <label for="samsung">Samsung</label><br>
+                </li>
+            </ul>
+
+
+            <table>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            
+            </table>
