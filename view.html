@@ -138,7 +138,7 @@
   </div>
 
   <!----Filter option------------------------------------------------------------------------------------------------->
-  <div id="filter" class="filter-menu">
+  <dialog id="filter" class="filter-menu">
     <h1 style="text-align:center;font-weight:800;margin-bottom:20px;">FILTER BY</h1>
     <a href="javascript:void(0)" onclick="closefilter()">×</a>
     <div class="sub-div">
@@ -282,10 +282,9 @@
           <td><input type="checkbox" id="g4gb" name="g4gb" value="g4gb"></td>
           <td><label for="g4gb">4 GB</label></td>
         </tr>
-
       </table>
     </div>
-  </div>
+  </dialog>
   <!----Single Image Display section------------------------------------------------------------------------------------------------------------------------------------>
   <section>
     <div id="slide-container">
@@ -341,9 +340,6 @@
       <img class="demo" src="media\61Y30DpqRVL._SL1500_.jpg" onclick="currentSlide(9)">
       <img class="demo" src="media\61NV-Wb1iSL._SL1500_.jpg" onclick="currentSlide(10)">
       <img class="demo" src="media\61NV-Wb1iSL._SL1500_.jpg" onclick="currentSlide(11)">
-
-
-
     </div>
 
     <div id="more" class="arrow">
@@ -451,7 +447,7 @@
         <table>
           <tr>
             <td style="width:40%;">
-              <li><img src="media\Icons\mac-os-logo.png"> OS :</li>
+              <li><img src="media\Icons\operating-system.png"> OS :</li>
             </td>
             <td>MacOS 12 Monterey</td>
           </tr>
@@ -470,16 +466,16 @@
           <li>Stunning 40.65cm (16-inch) Retina display with True Tone technology.</li>
           <li>Touch Bar and Touch ID.</li>
           <li>AMD Radeon Pro 5300M graphics with GDDR6 memory.</li>
-          <li>Ultrafast SSD.</li>
+          <li>Ultra-fast SSD.</li>
           <li>Intel UHD Graphics 630.</li>
-          <li>Six-speaker system with force-cancelling woofes.</li>
+          <li>Six-speaker system with force-cancelling woofers.</li>
           <li>Four Thunderbolt 3 (USB-C) ports.</li>
           <li>Up to 11 hours of battery life.</li>
           <li>802.11ac Wi-Fi.</li>
         </ul>
       </div>
       <div class="pros-cons">
-        <h4>Pros <img src="media\Icons\happiness (1).png""></h4>
+        <h4>Pros <img src="media\Icons\happiness (1).png"></h4>
         <ul>
           <li>Super fast</li>
           <li>Extremely long battery life</li>
@@ -529,17 +525,14 @@
       slides[slideIndex - 1].style.display = "block";
       slides1[slideIndex - 1].style = "opacity:1; box-shadow: 4px 4px 8px 0 #1E90FF, 4px 6px 20px 0 #1E90FF;";
     }
-    console.log(document.getElementById("filter").className);
-    function openfilter(){
-      document.getElementById("filter").style.display="block";
-      document.getElementById("filter").className="filter-menu animate";
-      document.getElementById("fullbody").style="background-color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0.4);"
+
+    function openfilter() {
+    
       console.log(document.getElementById("filter").className);
-   
-    }    
-    function closefilter(){
-      document.getElementById("filter").style.display="none";
-      document.getElementById("filter").className="filter-menu animatezoomout"
+
+    }
+    function closefilter() {
+ 
       console.log(document.getElementById("filter").className);
     }
 
